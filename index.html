@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <button class="btn reset">Play Again!</button>
+      <h1>Guess The Secret Number</h1>
+      <p class="between">(Between 1 and 20)</p>
+    </header>
+
+    <main>
+      <section class="left">
+        <input type="number" class="guess" value="" />
+        <button class="btn check">Check</button>
+        <p class="message">Start Guessing...</p>
+      </section>
+      <section class="right">
+        <p>💯 Your Score: <span class="score">20</span></p>
+        <p>🥇 High Score: <span class="highscore">0</span></p>
+      </section>
+    </main>
+
+    <h3>Instructions</h3>
+    Guess the secret number.<br />
+    If your guess is too high or too low, you'll get a hint.<br />
+    You have 20 chances to get find the secret number.
+
+    <script src="./script.js"></script>
+  </body>
+</html>
