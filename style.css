@@ -1,0 +1,63 @@
+html {
+  box-sizing: inherit;
+  font-size: 30px;
+}
+
+body {
+  font-style: italic;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+header {
+  position: relative;
+  border-bottom: 5px solid white;
+  padding: 20px;
+  background-color: gray;
+}
+
+button {
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 5px;
+}
+
+button:hover {
+  background-color: lightskyblue;
+}
+
+main {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  flex-direction: column;
+}
+
+.right {
+  width: 52rem;
+}
+
+.guess {
+  height: 40px;
+  font-size: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.reset {
+  float: left;
+}
+/* 
+.instructions {
+  border: white 3px solid;
+} */
