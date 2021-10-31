@@ -55,3 +55,14 @@ const handleCloseButton = function () {
 document.querySelector('.close').addEventListener('click', handleCloseButton);
 document.querySelector('.check').addEventListener('click', handleCheck);
 document.querySelector('.reset').addEventListener('click', handleReset);
+
+document.addEventListener('keypress', function (event) {
+  const success = document.querySelector('.success');
+  if (event.key === 'Enter') {
+    if (success.classList.contains('hidden')) {
+      handleCheck();
+    } else {
+      handleCloseButton();
+    }
+  }
+});
