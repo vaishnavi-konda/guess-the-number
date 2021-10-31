@@ -12,8 +12,8 @@ const handleCheck = function () {
     message = '🚫 No number';
   } else if (guess === secretNumber) {
     message = guess + ' is the Correct Answer 🎉';
+    handleSuccess(message);
     highscore = Math.max(score, highscore);
-    document.querySelector('body').style.backgroundColor = 'green';
   } else if (guess < secretNumber) {
     score--;
     message = guess + ' is Too Low 👇 ';
@@ -24,6 +24,7 @@ const handleCheck = function () {
 
   if (score < 1) {
     message = 'You lost the game 😢';
+    handleReset();
   }
 
   document.querySelector('.message').textContent = message;
@@ -39,5 +40,18 @@ const handleReset = function () {
   document.querySelector('body').style.backgroundColor = 'black';
 };
 
+const handleSuccess = function (guess) {
+  document.querySelector('.modal-message').textContent = guess;
+  document.querySelector('.success').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
+};
+
+const handleCloseButton = function () {
+  document.querySelector('.success').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
+  handleReset();
+};
+
+document.querySelector('.close').addEventListener('click', handleCloseButton);
 document.querySelector('.check').addEventListener('click', handleCheck);
 document.querySelector('.reset').addEventListener('click', handleReset);
