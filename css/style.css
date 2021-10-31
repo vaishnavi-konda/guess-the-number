@@ -5,16 +5,15 @@ html {
 
 body {
   font-style: italic;
-  color: white;
-  background-color: black;
+  color: black;
+  background: linear-gradient(to right, lightskyblue, lightgreen);
   text-align: center;
 }
 
 header {
   position: relative;
-  border-bottom: 5px solid white;
+  border-bottom: 10px solid white;
   padding: 20px;
-  background-color: gray;
 }
 
 button {
@@ -57,7 +56,3 @@ main {
 .reset {
   float: left;
 }
-/* 
-.instructions {
-  border: white 3px solid;
-} */
