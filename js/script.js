@@ -40,6 +40,10 @@ const handleReset = function () {
   document.querySelector('body').style.backgroundColor = 'black';
 };
 
+document.querySelector('.check').addEventListener('click', handleCheck);
+document.querySelector('.reset').addEventListener('click', handleReset);
+
+// Functionality: A Window appears on guessing the correct number
 const handleSuccess = function (guess) {
   document.querySelector('.modal-message').textContent = guess;
   document.querySelector('.success').classList.remove('hidden');
@@ -53,9 +57,8 @@ const handleCloseButton = function () {
 };
 
 document.querySelector('.close').addEventListener('click', handleCloseButton);
-document.querySelector('.check').addEventListener('click', handleCheck);
-document.querySelector('.reset').addEventListener('click', handleReset);
 
+// Key press functionality
 document.addEventListener('keypress', function (event) {
   const success = document.querySelector('.success');
   if (event.key === 'Enter') {
