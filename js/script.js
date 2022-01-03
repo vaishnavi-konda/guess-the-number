@@ -9,9 +9,10 @@ const handleCheck = function () {
   const guess = Number(document.querySelector('.guess').value);
   let message = '';
   if (!guess) {
-    message = '🚫 No number';
+    message = '⚠ Enter a number';
   } else if (guess === secretNumber) {
-    message = guess + ' is the Correct Answer 🎉';
+    message = guess + ' is the Correct Answer 🥳, Your score is ' + score;
+    console.log(message);
     handleSuccess(message);
     highscore = Math.max(score, highscore);
   } else if (guess < secretNumber) {
@@ -34,6 +35,7 @@ const handleCheck = function () {
 
 const handleReset = function () {
   secretNumber = Math.floor(Math.random() * 20) + 1;
+  score = 20;
   document.querySelector('.score').textContent = 20;
   document.querySelector('.message').textContent = 'Start Guessing...';
   document.querySelector('.guess').value = '';
